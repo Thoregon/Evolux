@@ -1,0 +1,27 @@
+{
+  "name": "evolux",
+  "version": "1.0.0",
+  "description": "Thoregon libraries, tools, etc. built on Evolux",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thoregon/Evolux.git"
+  },
+  "keywords": [
+    "Evolux",
+    "Thoregon",
+    "Tools",
+    "Libraries",
+    "Frameworks"
+  ],
+  "author": "Bernhard Lukassen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thoregon/Evolux/issues"
+  },
+  "homepage": "https://github.com/Thoregon/Evolux#readme"
+}

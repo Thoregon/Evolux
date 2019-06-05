@@ -1,0 +1,81 @@
+Distributed DDD
+---------------
+
+- Universe
+    - define the section the app uses
+    - provide meta information, reflection, introspection & instrumentation
+
+- Layered Architecture
+    - API/SPI for each layer
+    - Streamlike
+    - enables pipes/decorators
+    - Processing/Tranformation Layer
+        - combine multiple 'services/functions/entries' to a bounded context (mesh)
+            - a sequence of underlying API calls into one on the
+        - allow easier API's to the clients
+        - enable easy creation of bounded contexts based on distributed services
+
+- Client
+    - For changes/processing create a command with a list of todo's
+    - Work on (immutable) collections of snapshots
+        - specify the visible universe (which data should be available locally)
+        - snapshots will be automatically updated
+
+- Service
+    - store each change
+    - build Event with a list of changes
+    - implement business logic
+    - should also be available on the local machine, works on a view (section) of the universe
+
+- Reflection & Metadata & Introspection & Instrumentation
+    - Available Commands
+    - Available Events
+    - Properties
+    - Types
+
+- Lazy Fluent API
+    - declarative
+    - interactive (to connect a UI directly)
+
+- Commands
+    - Transactions
+    - Builders
+    - Interactive Builders (e.g. connected to a UI or another input)
+
+- Events
+    - contains whole transaction
+
+- Collections
+    - A collection is a view on the objects in the universe
+    - Metadata for Objects
+        - also as stream source, sending events on changes
+    - Register Eventlisteners (--> extend EventEmitter)
+    - Register Classes for Metadata (will be created automatically)
+    - never loop over collections
+        - work on sets (sections) with commands
+    - Interactive Collections Content Constraints
+        - Filter Definitions
+            - Fulltext search (elastic search)
+            - ML
+            - Geofences, can change by zoom
+            - Selectable Options (checkbox)
+        - Sort Defintions
+        - Constrains sends change events to collection (wrapper)
+        - Collections sends events for changed content
+    - Immutable
+        - No modifications of collections
+        - Changes (add/delete/update) done by commands
+        - Events of changes will be emitted
+- Objects
+    - Singletons in Universe
+    - Objects in Collections
+    - Register Eventlisteners
+
+- UI
+    - Update after Rountrip (exec command —> receive event)
+    - Meshups using Components
+
+- Workflows
+    - Meshups of processes
+    - long lasting
+    - blockchain
