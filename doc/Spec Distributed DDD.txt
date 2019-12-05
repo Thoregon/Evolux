@@ -21,6 +21,10 @@ Distributed DDD
         - specify the visible universe (which data should be available locally)
         - snapshots will be automatically updated
 
+- Components
+    - every kind of component
+    - modules can be substructured with 'segment's
+
 - Service
     - store each change
     - build Event with a list of changes
@@ -79,3 +83,4 @@ Distributed DDD
     - Meshups of processes
     - long lasting
     - blockchain
+
